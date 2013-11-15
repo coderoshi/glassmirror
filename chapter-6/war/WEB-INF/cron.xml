@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/lunchcron</url>
+    <description>Load lunch suggestions for all users at midnight</description>
+    <schedule>every day 00:00</schedule>
+  </cron>
+</cronentries>
