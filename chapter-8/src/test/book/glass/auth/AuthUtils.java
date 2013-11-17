@@ -19,19 +19,15 @@ import com.google.api.client.util.store.DataStore;
 public final class AuthUtils
 {
   public static final List<String> SCOPES = Arrays.asList(
-//    "https://www.googleapis.com/auth/glass.timeline",
+    "https://www.googleapis.com/auth/glass.timeline",
     "https://www.googleapis.com/auth/userinfo.profile",
     "https://www.googleapis.com/auth/userinfo.email"
   );
-//  public static final String WEB_CLIENT_ID =
-//      "[MY_NUMBER].apps.googleusercontent.com";
-//  public static final String WEB_CLIENT_SECRET = "[MY_SECRET_KEY]";
-//  public static final String OAUTH2_PATH = "/oauth2callback";
-//  public static final String API_KEY = "[MY_API_KEY]";
-  public static final String WEB_CLIENT_ID = "362009502495.apps.googleusercontent.com";
-  public static final String WEB_CLIENT_SECRET = "6ziZ_bc0ciW6dmjqSrZzO_pa";
+  public static final String WEB_CLIENT_ID =
+      "[MY_NUMBER].apps.googleusercontent.com";
+  public static final String WEB_CLIENT_SECRET = "[MY_SECRET_KEY]";
   public static final String OAUTH2_PATH = "/oauth2callback";
-  public static final String API_KEY = "AIzaSyCHlXz8-u6ScXR7-VPSUADEIsQzfp_SMyQ";
+  public static final String API_KEY = "[MY_API_KEY]";
 
   public static Credential getCredential(String userId) throws IOException {
     return userId == null ? null : buildCodeFlow().loadCredential( userId );
