@@ -127,7 +127,7 @@ public final class LunchRoulette
       .setAction( "CUSTOM" )
       .setValues( menuValues )
     );
-    // ENDaltMenuValues
+    // END:altMenuValues
 
     timelineItem.getMenuItems().add(
       new MenuItem().setAction( "DELETE" )
@@ -142,12 +142,10 @@ public final class LunchRoulette
   {
     Mirror mirror = MirrorUtils.getMirror( userId );
 
-    // START:location
     Location location = mirror.locations().get("latest").execute();
 
     double latitude = location.getLatitude();
     double longitude = location.getLongitude();
-    // END:location
 
     // START:insertRandomRestaurantTimelineItem
     // get a nearby restaurant from Google Places

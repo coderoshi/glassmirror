@@ -4,8 +4,6 @@
 *.war
 *.ear
 target/
-.classpath
 .settings/
-.project
 .metadata
 bin/
