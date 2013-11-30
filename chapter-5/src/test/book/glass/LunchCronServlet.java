@@ -50,7 +50,7 @@ public class LunchCronServlet extends HttpServlet
         LunchRoulette.insertAndSaveSimpleHtmlTimelineItem(ctx, userId);
       } catch (GoogleJsonResponseException e) {
      // END:doget
-        // remove invalid user from the backend
+        // remove invalid user from the back end
         removeKeys.add( result.getKey() );
       }
     }

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 //START:randomlunch
 public class LunchRouletteServlet extends HttpServlet
 {
-  /** Accept an HTTP GET request, and writes a random lunch type. */
+  /** Accepts an HTTP GET request, and writes a random lunch type. */
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws IOException, ServletException
   {

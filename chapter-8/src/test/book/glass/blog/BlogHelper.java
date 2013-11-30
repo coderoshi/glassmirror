@@ -29,7 +29,7 @@ public final class BlogHelper
   {
     if( user == null || !user.ownsBlog( blog )) {
       throw new ServletException(
-          "You must be logged and own this blog to create a post" );
+          "You must be logged in and own this blog to create a post" );
     }
     
     Post post = new Post( blog.getNickname(), title, body, new Date() );

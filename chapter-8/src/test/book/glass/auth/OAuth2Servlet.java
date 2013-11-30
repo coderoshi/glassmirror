@@ -62,7 +62,7 @@ public class OAuth2Servlet extends HttpServlet
 
     String callbackUri = AuthUtils.fullUrl( req, AuthUtils.OAUTH2_PATH );
 
-    // We need a flow no matter what to either redirect, or extract information
+    // We need a flow no matter what to either redirect or extract information
     AuthorizationCodeFlow flow = AuthUtils.buildCodeFlow();
 
     // Without a response code, redirect to Google's authorization URI
@@ -74,7 +74,7 @@ public class OAuth2Servlet extends HttpServlet
     // set the user's ID into the session
     GoogleTokenResponse tokenRes = getTokenRes( flow, authCode, callbackUri );
 
-    // Extract the Google User ID from the ID token in the auth response
+    // Extract the Google user ID from the ID token in the auth response
     String userId = getUserId( tokenRes );
 
     // Store the credential with the user
@@ -170,7 +170,7 @@ public class OAuth2Servlet extends HttpServlet
   }
 
   /**
-   * Extract the Google User ID from the ID token in the auth response
+   * Extract the Google user ID from the ID token in the auth response
    */
   private String getUserId( GoogleTokenResponse tokenRes )
       throws IOException
