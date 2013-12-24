@@ -35,7 +35,7 @@ public class AuthFilter implements Filter
   }
 
   private boolean isRedirectable(HttpServletRequest request) {
-    return !request.getRequestURI().equals( AuthUtils.OAUTH2_PATH )
+    return !request.getRequestURI().contains( AuthUtils.OAUTH2_PATH )
         && !request.getRequestURI().equals( "/" )
         && !request.getRequestURI().startsWith( "/blog" )
         && !request.getRequestURI().startsWith( "/posts" );
