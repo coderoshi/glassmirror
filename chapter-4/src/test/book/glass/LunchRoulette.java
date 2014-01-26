@@ -122,6 +122,8 @@ public final class LunchRoulette
       .setTitle( "Lunch Roulette" )
       .setText( getRandomCuisine() );
 
+    setSimpleMenuItems( timelineItem );
+    
     TimelineItem tiResp = timeline.insert( timelineItem ).execute();
     
     setLunchRouletteId( userId, tiResp.getId() );
@@ -144,12 +146,15 @@ public final class LunchRoulette
     return timelineItem;
   }
 
+  // This code is different from the book. It adds the toggle pinned menu item
   // START:setSimpleMenuItems
-  public static void setSimpleMenuItems( TimelineItem ti, boolean hasRestaurant ) {
-    // Add blank menu list
+  public static void setSimpleMenuItems( TimelineItem ti ) {
+    // Create a blank menu list
     ti.setMenuItems( new LinkedList<MenuItem>() );
     
+    // Add menu items
     ti.getMenuItems().add( new MenuItem().setAction( "READ_ALOUD" ) );
+    ti.getMenuItems().add( new MenuItem().setAction( "TOGGLE_PINNED" ) );
     ti.getMenuItems().add( new MenuItem().setAction( "DELETE" ) );
   }
   // END:setSimpleMenuItems
