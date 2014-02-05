@@ -509,7 +509,7 @@ public final class LunchRoulette
     Key key = KeyFactory.createKey( LunchRoulette.class.getSimpleName(), userId );
     try {
       Entity userData = store.get( key );
-      return (String) userData.getProperty("lunchRouletteId");
+      return (String) userData.getProperty("lastId");
     }
     catch (EntityNotFoundException e) {
       return null;
