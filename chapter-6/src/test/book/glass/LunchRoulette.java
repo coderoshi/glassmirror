@@ -366,7 +366,10 @@ public final class LunchRoulette
     // START:getLastSavedTimelineItem
     String id = getLunchRouletteId( userId );
 
-    TimelineItem timelineItem = timeline.get( id ).execute();
+    TimelineItem timelineItem = null;
+    if( id != null ) {
+      timelineItem = timeline.get( id ).execute();
+    }
     // END:getLastSavedTimelineItem
 
     return timelineItem;
