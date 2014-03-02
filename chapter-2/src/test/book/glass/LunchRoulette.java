@@ -36,6 +36,9 @@ public class LunchRoulette
    * @throws IOException
    * @throws ServletException
    */
+  // NOTE: If you're having trouble finding Freemarker code in your Eclipse
+  // project, don't forget to add the JAR to your "Java Build Path" Libraries
+  // via project "Properties".
   // START:render
   public static String render(ServletContext ctx, String template,
                               Map<String, Object> data)
